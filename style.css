@@ -99,7 +99,7 @@ body::after {
   top: 0; left: 0;
   height: 3px;
   width: 0%;
-  background: linear-gradient(90deg, var(--maroon), var(--maroon-lite));
+  background: linear-gradient(90deg, var(--maroon), var(--maroon-lite), var(--cream));
   z-index: 9997;
   transition: width 0.1s linear;
 }
@@ -168,7 +168,7 @@ nav {
   background: rgba(12,12,16,0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 2px solid var(--maroon);
   transition: padding 0.3s, background 0.3s;
 }
 nav.scrolled {
@@ -341,8 +341,8 @@ nav.scrolled {
 .marquee-strip {
   overflow: hidden;
   background: var(--dark-3);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  border-top: 2px solid var(--maroon);
+  border-bottom: 2px solid var(--maroon);
   padding: 1rem 0;
 }
 .marquee-track {
@@ -379,9 +379,13 @@ nav.scrolled {
   color: var(--cream);
   font-weight: 700;
   margin-bottom: 0.8rem;
-  display: inline-block;
-  border-left: 2px solid var(--maroon);
-  padding-left: 0.7rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-left: 3px solid var(--maroon);
+  padding: 0.25rem 0.7rem;
+  background: rgba(122,0,0,0.18);
+  border-radius: 0 2px 2px 0;
 }
 .section-title {
   font-family: 'Barlow Condensed', sans-serif;
@@ -392,6 +396,16 @@ nav.scrolled {
   color: var(--text);
   line-height: 1;
   margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 48px; height: 3px;
+  background: var(--maroon);
+  border-radius: 2px;
 }
 .section-sub {
   font-size: 1rem;
@@ -431,6 +445,7 @@ nav.scrolled {
 .service-card {
   background: var(--dark-3);
   border: 1px solid var(--border);
+  border-top: 2px solid var(--maroon);
   border-radius: var(--radius);
   padding: 2rem 1.6rem;
   transition: border-color 0.3s, transform 0.3s, background 0.3s;
@@ -464,7 +479,7 @@ nav.scrolled {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--text);
+  color: var(--maroon-lite);
   margin-bottom: 0.7rem;
 }
 .service-card p {
@@ -565,6 +580,10 @@ nav.scrolled {
   overflow: hidden;
   border-radius: var(--radius);
   border: 1px solid var(--border);
+  transition: border-color 0.3s;
+}
+.gallery-item:hover {
+  border-color: var(--maroon);
 }
 .gallery-item img {
   width: 100%; height: 100%;
@@ -600,7 +619,7 @@ nav.scrolled {
   font-size: 0.75rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--maroon-lite);
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 600;
 }
@@ -657,7 +676,7 @@ nav.scrolled {
    ============================================= */
 footer {
   background: var(--dark);
-  border-top: 1px solid var(--border);
+  border-top: 3px solid var(--maroon);
   padding: 2.5rem 4rem;
 }
 .footer-inner {
@@ -685,7 +704,7 @@ footer {
   text-transform: uppercase;
   transition: color 0.3s;
 }
-.footer-links a:hover { color: var(--maroon); }
+.footer-links a:hover { color: var(--maroon-lite); }
 .footer-copy {
   font-size: 0.75rem;
   color: var(--text-dim);
