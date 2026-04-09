@@ -866,7 +866,7 @@ footer {
 
   /* Zoom out hero background on mobile */
   .hero-bg {
-    background-size: 145%;
+    background-size: 150%;
     background-position: center center;
   }
   /* Lighten overlay on mobile so he shows through more */
@@ -883,7 +883,11 @@ footer {
   nav.scrolled { padding: 0.7rem 1.2rem; }
   .nav-links { display: none; }
 
-  .hero { padding: 6rem 1.2rem 3rem; }
+  .hero {
+    min-height: 100svh;
+    padding: 7rem 1.2rem 4rem;
+    align-items: flex-start;
+  }
   .hero-scroll-hint { display: none; }
   .hero-btns { flex-direction: column; }
   .btn-primary, .btn-ghost { text-align: center; }
