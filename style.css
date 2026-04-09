@@ -864,9 +864,10 @@ footer {
     transform: translateZ(0);
   }
 
-  /* Shift hero image right on mobile so Connor is visible beside text */
+  /* Zoom out hero background on mobile */
   .hero-bg {
-    background-position: 65% center;
+    background-size: 150%;
+    background-position: center center;
   }
   /* Lighten overlay on mobile so he shows through more */
   .hero-overlay {
