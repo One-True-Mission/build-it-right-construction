@@ -866,7 +866,8 @@ footer {
 
   /* Zoom out hero background on mobile */
   .hero-bg {
-    background-size: 150%;
+    background-image: url('assets/hero2-bg.jpg');
+    background-size: cover;
     background-position: center center;
   }
   /* Lighten overlay on mobile so he shows through more */
