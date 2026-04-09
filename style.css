@@ -13,11 +13,13 @@
   --maroon-dim:  rgba(122,0,0,0.18);
   --maroon-glow: rgba(122,0,0,0.10);
   --maroon-lite: #a01a2a;
+  --cream:       #e8ddd0;
+  --cream-dim:   rgba(232,221,208,0.55);
   --text:        #f0ece6;
   --text-muted:  #9e9a96;
   --text-dim:    #5a5652;
   --border:      rgba(255,255,255,0.07);
-  --border-o:    rgba(80,0,0,0.35);
+  --border-o:    rgba(122,0,0,0.40);
   --radius:      4px;
 }
 
@@ -71,7 +73,7 @@ body::after {
 .cursor {
   position: fixed;
   width: 10px; height: 10px;
-  background: var(--maroon);
+  background: var(--cream);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
@@ -182,7 +184,7 @@ nav.scrolled {
   color: var(--text);
   text-decoration: none;
 }
-.nav-logo span { color: var(--maroon); }
+.nav-logo span { color: var(--maroon-lite); }
 
 .nav-links {
   list-style: none;
@@ -219,19 +221,20 @@ nav.scrolled {
   overflow: hidden;
 }
 
-/* hero section gets its own bg layer so bg.jpg shows through elsewhere */
+/* hero uses its own dedicated image */
 .hero-bg {
   position: absolute; inset: 0;
-  background: url('assets/bg.jpg') center center / cover no-repeat;
+  background: url('assets/hero.jpg') center center / cover no-repeat;
   z-index: 0;
 }
 .hero-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(
-    135deg,
-    rgba(10,10,14,0.92) 0%,
-    rgba(10,10,14,0.78) 50%,
-    rgba(80,0,0,0.10) 100%
+    100deg,
+    rgba(8,8,10,0.93) 0%,
+    rgba(8,8,10,0.80) 45%,
+    rgba(8,8,10,0.45) 75%,
+    rgba(8,8,10,0.20) 100%
   );
   z-index: 1;
 }
@@ -245,7 +248,7 @@ nav.scrolled {
   font-size: 0.78rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--maroon);
+  color: var(--cream);
   margin-bottom: 1.2rem;
   font-weight: 600;
 }
@@ -357,7 +360,7 @@ nav.scrolled {
   font-weight: 600;
 }
 .marquee-track .dot {
-  color: var(--maroon);
+  color: var(--cream);
   font-size: 0.6rem;
 }
 @keyframes marqueeScroll {
@@ -373,7 +376,7 @@ nav.scrolled {
   font-size: 0.72rem;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: var(--maroon);
+  color: var(--cream);
   font-weight: 700;
   margin-bottom: 0.8rem;
   display: inline-block;
@@ -452,7 +455,7 @@ nav.scrolled {
 }
 .service-icon {
   font-size: 1.2rem;
-  color: var(--maroon);
+  color: var(--cream);
   margin-bottom: 1.1rem;
 }
 .service-card h3 {
@@ -475,7 +478,7 @@ nav.scrolled {
    ============================================= */
 .ba-section {
   padding: 7rem 4rem;
-  background: var(--dark-2);
+  background: rgba(10,10,14,0.55);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
@@ -583,7 +586,7 @@ nav.scrolled {
    ============================================= */
 .contact-section {
   padding: 7rem 4rem;
-  background: var(--dark-2);
+  background: rgba(10,10,14,0.55);
   border-top: 1px solid var(--border);
 }
 .contact-wrap {
