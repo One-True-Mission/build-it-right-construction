@@ -215,7 +215,7 @@ nav.scrolled {
 }
 .hero-bg {
   position: absolute; inset: 0;
-  background: url('assets/hero.jpg') center center / cover no-repeat;
+  background: url('assets/hero-bg.jpg') center center / cover no-repeat;
   z-index: 0;
 }
 .hero-overlay {
@@ -417,7 +417,7 @@ nav.scrolled {
    ============================================= */
 .about-section {
   padding: 7rem 4rem;
-  background: var(--dark-2);
+  background: rgba(10,10,14,0.55);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
