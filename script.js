@@ -131,17 +131,17 @@ if (form) {
         headers: { 'Accept': 'application/json' }
       });
       if (res.ok) {
-        submitBtn.textContent = 'Request Sent!';
+        submitBtn.textContent = 'Message Sent!';
         form.reset();
         setTimeout(() => {
-          submitBtn.textContent = 'Send Request \u2192';
+          submitBtn.textContent = 'Send Message \u2192';
           submitBtn.disabled = false;
         }, 4000);
       } else {
         throw new Error();
       }
     } catch {
-      submitBtn.textContent = 'Send Request \u2192';
+      submitBtn.textContent = 'Send Message \u2192';
       submitBtn.disabled = false;
       alert('Something went wrong. Please try again.');
     }
