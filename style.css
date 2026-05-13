@@ -746,6 +746,7 @@ nav.scrolled {
   padding: 0.85rem 1rem;
   outline: none;
   transition: border-color 0.3s;
+  appearance: none;
   -webkit-appearance: none;
 }
 .form-field input::placeholder,
